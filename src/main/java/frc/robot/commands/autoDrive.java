@@ -1,7 +1,6 @@
 
 package frc.robot.commands;
 
-import java.util.function.DoubleSupplier;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.drivetrainsub;
@@ -10,14 +9,10 @@ import frc.robot.subsystems.drivetrainsub;
 public class autoDrive extends CommandBase{
 
     private final drivetrainsub m_Drive;
-    private final DoubleSupplier leftSpeed;
-    private final DoubleSupplier rightSpeed;
     private final double distance;
     
-    public autoDrive (drivetrainsub subsystem, DoubleSupplier leftSpeed, DoubleSupplier rightSpeed, double distance){
+    public autoDrive (drivetrainsub subsystem, double distance){
         m_Drive = subsystem;
-        this.leftSpeed = leftSpeed;
-        this.rightSpeed = rightSpeed;
         this.distance = distance;
 
     }
@@ -25,6 +20,7 @@ public class autoDrive extends CommandBase{
     // only goes once at beginning when command is called
     @Override
     public void initialize(){
+        m_Drive.resetEncoder();
     }
 
     // keeps repeating until the command ends
@@ -36,14 +32,19 @@ public class autoDrive extends CommandBase{
     //only goes once at end when command is finishing
     @Override
     public void end(boolean inerrupted){
-
+        m_Drive.tankdrive(0, 0);
     }
 
     //condition for the command to end on its own
     @Override
     public boolean isFinished(){
-
-        return false;
+        if (m_Drive.getDistance()<distance) {
+            return false;
+        }
+        else {
+            return true;
+        }
+        
 
     }
 
