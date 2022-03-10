@@ -48,7 +48,7 @@ public void resetEncoder(){
 
 //tells the distance of how far youve traveled
 public double getDistance(){
-  return (right.getDistance()+left.getDistance())/2;
+  return Math.abs((right.getDistance()+left.getDistance())/2);
 }
 
 public void autoDrive(double distance) {
