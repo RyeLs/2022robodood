@@ -22,21 +22,24 @@ public class autoDrive extends CommandBase{
 
     }
     
+    // only goes once at beginning when command is called
     @Override
     public void initialize(){
-
     }
 
+    // keeps repeating until the command ends
     @Override
     public void execute(){
         m_Drive.autoDrive(distance);
     }
 
+    //only goes once at end when command is finishing
     @Override
     public void end(boolean inerrupted){
 
     }
 
+    //condition for the command to end on its own
     @Override
     public boolean isFinished(){
 
