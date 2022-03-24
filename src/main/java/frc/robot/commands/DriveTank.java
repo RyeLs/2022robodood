@@ -28,7 +28,7 @@ public class DriveTank extends CommandBase{
     // keeps repeating until the command ends
     @Override
     public void execute(){
-        m_Drive.tankdrive(leftSpeed.getAsDouble(), rightSpeed.getAsDouble());
+        m_Drive.tankdrive(Math.pow(leftSpeed.getAsDouble(), 4)/2, Math.pow(rightSpeed.getAsDouble(), 4)/2);
     }
 
     //only goes once at end when command is finishing
