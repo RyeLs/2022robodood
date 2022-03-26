@@ -26,7 +26,7 @@ public class autoShooter extends CommandBase{
     // keeps repeating until the command ends
     @Override
     public void execute(){
-        m_Shooter.shooterOut();
+        m_Shooter.shooterAuto();
     }
 
     //only goes once at end when command is finishing

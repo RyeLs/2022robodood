@@ -30,4 +30,11 @@ public class shootersub extends SubsystemBase {
         left.setVoltage(0);
         right.setVoltage(0);
     }
+
+    //auto shooter
+    public void shooterAuto (){
+        left.setVoltage(Constants.shooterauto);
+        right.setVoltage(Constants.shooterauto);
+    }
 }
+

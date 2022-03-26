@@ -58,54 +58,53 @@ public class RobotContainer {
     triggersub Ltrigger = new triggersub(xboxController, 2);
     triggersub Rtrigger = new triggersub(xboxController, 3);
 
-    A.whenPressed(new intakeout(m_Intake));
-    A.whenReleased(new intakestop(m_Intake));
+    A.whenPressed(new hingedown(m_Hinge));
+    A.whenReleased(new hingestop(m_Hinge));
 
-    B.whenPressed(new intakein(m_Intake));
-    B.whenReleased(new intakestop(m_Intake));
+    B.whenPressed(new hingeup(m_Hinge));
+    B.whenReleased(new hingestop(m_Hinge));
 
     X.whenPressed(new winchlower(m_Lift));
     X.whenReleased(new winchstop(m_Lift));
 
-    Y.whenPressed(new winchraise(m_Lift));
-    Y.whenReleased(new winchstop(m_Lift));
+    Y.whenPressed(new liftraise(m_Lift));
+    Y.whenReleased(new liftstop(m_Lift));
+    
+    LB.whenPressed(new shooterout(m_Shooter));
+    LB.whenReleased(new shooterstop(m_Shooter));
 
-    LB.whenPressed(new hingedown(m_Hinge));
-    LB.whenReleased(new hingestop(m_Hinge));
-
-    RB.whenPressed(new hingeup(m_Hinge));
-    RB.whenReleased(new hingestop(m_Hinge));
+    RB.whenPressed(new shooterin(m_Shooter));
+    RB.whenReleased(new shooterstop(m_Shooter));
 
     Back.whenPressed(new liftlower(m_Lift));
     Back.whenReleased(new liftstop(m_Lift));
 
-    Start.whenPressed(new liftraise(m_Lift));
-    Start.whenReleased(new liftstop(m_Lift));
+    Start.whenPressed(new winchraise(m_Lift));
+    Start.whenReleased(new winchstop(m_Lift));
 
-    Ltrigger.whenPressed(new shooterout(m_Shooter));
-    Ltrigger.whenReleased(new shooterstop(m_Shooter));
+    Ltrigger.whenPressed(new intakeout(m_Intake));
+    Ltrigger.whenReleased(new intakestop(m_Intake));
 
-    Rtrigger.whenPressed(new shooterin(m_Shooter));
-    Rtrigger.whenReleased(new shooterstop(m_Shooter));
+    Rtrigger.whenPressed(new intakein(m_Intake));
+    Rtrigger.whenReleased(new intakestop(m_Intake));
 
     /*
-      out/down - left
-      in/up - right
 
       left drive: left joystick
       right drive: right joystick
 
-      hinge down: LB
-      hinge up: RB
-      intake out: A
-      intake in: B
-      shooter out: LT
-      shooter in: RT
+      hinge down: A
+      hinge up: B
+      intake out: LT
+      intake in: RT
+      shooter out: LB
+      shooter in: RB
 
-      lift down: back
-      lift up: start
+      lift down: Back
+      winch up: Start
       winch down: X
-      winch up: Y
+      lift up: Y
+    
       
     /*
 

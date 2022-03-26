@@ -37,7 +37,7 @@ public class drivetrainsub extends SubsystemBase {
  * @param rightSpeed robots right side speed
  */
 public void tankdrive(double leftSpeed,double rightSpeed) {
-  drive.tankDrive(-leftSpeed, rightSpeed);
+  drive.tankDrive(-leftSpeed, rightSpeed,false);
 }
 
 //resets the encoder to 0

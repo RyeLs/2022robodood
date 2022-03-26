@@ -22,9 +22,9 @@ public class liftsub  extends SubsystemBase{
 
     //lift goes down
     public void liftLower (){
-        lift.setVoltage(-Constants.liftvoltdown);
+        lift.setVoltage(Constants.liftvoltdown);
+    
     }
-
     //lift no move
     public void liftStop (){
         lift.setVoltage(0);
