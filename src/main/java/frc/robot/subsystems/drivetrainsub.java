@@ -58,6 +58,17 @@ public void autoDrive(double distance) {
   }
 }
 
+public double getRotation(){
+  return 1;
+}
+
+public void autoTurn(double degrees){
+  while (getRotation()<degrees){
+    double brake = 1-getRotation()/degrees;
+    tankdrive(Constants.autoDrive*brake, Constants.autoDrive*brake);
+  }
+}
+
   @Override
   public void periodic() {
     // This method will be called once per scheduler run

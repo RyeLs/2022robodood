@@ -29,8 +29,9 @@ public class DriveTank extends CommandBase{
     @Override
     public void execute(){
         //m_Drive.tankdrive(Math.pow(leftSpeed.getAsDouble(), 3)/1.7, Math.pow(rightSpeed.getAsDouble(), 3)/1.7);
-        m_Drive.tankdrive(-1.1/(1+Math.pow(2,-2*(-leftSpeed.getAsDouble()-.5)))+(1.1/3), 
-        -1.1/(1+Math.pow(2,-2*(-rightSpeed.getAsDouble()-.5)))+(1.1/3));
+        //Four changes
+        m_Drive.tankdrive(-1.2/(1+Math.pow(2,-2*(-leftSpeed.getAsDouble()-.5)))+(1.2/3), 
+        -1.2/(1+Math.pow(2,-2*(-rightSpeed.getAsDouble()-.5)))+(1.2/3));
     }
 
     //only goes once at end when command is finishing

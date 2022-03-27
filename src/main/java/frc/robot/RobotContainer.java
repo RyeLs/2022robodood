@@ -23,12 +23,11 @@ public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private final drivetrainsub m_Drive = new drivetrainsub ();
   Joystick xboxController = new Joystick(0);
-  private final AutonomousPhase autonomous = new AutonomousPhase ();
   private final hingesub m_Hinge = new hingesub ();
   private final intakesub m_Intake = new intakesub ();
   private final liftsub m_Lift = new liftsub ();
   private final shootersub m_Shooter = new shootersub ();
-
+  private final AutonomousPhase autonomous = new AutonomousPhase (m_Drive, m_Shooter, m_Intake);
 
   
 

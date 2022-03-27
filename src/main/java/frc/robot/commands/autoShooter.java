@@ -9,11 +9,9 @@ import frc.robot.subsystems.shootersub;
 public class autoShooter extends CommandBase{
 
     private final shootersub m_Shooter;
-    private final double power;
     
-    public autoShooter (shootersub subsystem, double power){
+    public autoShooter (shootersub subsystem){
         m_Shooter = subsystem;
-        this.power = power;
 
     }
     

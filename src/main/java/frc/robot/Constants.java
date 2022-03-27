@@ -30,13 +30,13 @@ public final class Constants {
     public static int winch = 3;
 
     //setting the voltage (power) for the motors
-    public static double hingevolt = 3; //change this later when figuring out the voltage for the robo
+    public static double hingevolt = 5; //change this later when figuring out the voltage for the robo
     public static double intakevolt = 6;
-    public static double liftvoltup = 5;
+    public static double liftvoltup = 4;
     public static double liftvoltdown = -2;
     public static double shootervoltout = 8;
     public static double shootervoltin = 6;
-    public static double autoDrive = 1;
+    public static double autoDrive = .3;
     public static double winchvolt = 5;
 
     //list of ports for sensors
