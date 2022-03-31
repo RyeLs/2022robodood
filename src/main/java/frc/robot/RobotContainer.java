@@ -51,7 +51,7 @@ public class RobotContainer {
     Button X = new JoystickButton(xboxController, 3);
     Button Y = new JoystickButton(xboxController, 4);
     Button LB = new JoystickButton(xboxController, 5);
-    Button RB = new JoystickButton(xboxController, 6);
+    //Button RB = new JoystickButton(xboxController, 6);
     Button Back = new JoystickButton(xboxController, 7);
     Button Start = new JoystickButton(xboxController, 8);
     triggersub Ltrigger = new triggersub(xboxController, 2);
@@ -72,8 +72,8 @@ public class RobotContainer {
     LB.whenPressed(new shooterout(m_Shooter));
     LB.whenReleased(new shooterstop(m_Shooter));
 
-    RB.whenPressed(new shooterin(m_Shooter));
-    RB.whenReleased(new shooterstop(m_Shooter));
+    //RB.whenPressed(new shooterin(m_Shooter));
+    //RB.whenReleased(new shooterstop(m_Shooter));
 
     Back.whenPressed(new liftlower(m_Lift));
     Back.whenReleased(new liftstop(m_Lift));
@@ -82,10 +82,10 @@ public class RobotContainer {
     Start.whenReleased(new winchstop(m_Lift));
 
     Ltrigger.whenPressed(new intakeout(m_Intake));
-    Ltrigger.whenReleased(new intakestop(m_Intake));
+    Ltrigger.whenReleased(new intakestop(m_Intake, m_Shooter));
 
-    Rtrigger.whenPressed(new intakein(m_Intake));
-    Rtrigger.whenReleased(new intakestop(m_Intake));
+    Rtrigger.whenPressed(new intakein(m_Intake, m_Shooter));
+    Rtrigger.whenReleased(new intakestop(m_Intake, m_Shooter));
 
     /*
 
@@ -96,8 +96,8 @@ public class RobotContainer {
       hinge up: B
       intake out: LT
       intake in: RT
+      shooter in: RT
       shooter out: LB
-      shooter in: RB
 
       lift down: Back
       winch up: Start
@@ -105,7 +105,7 @@ public class RobotContainer {
       lift up: Y
     
       
-    /*
+    */
 
     /*
     if(xboxController.getRawAxis(2)>0.5){

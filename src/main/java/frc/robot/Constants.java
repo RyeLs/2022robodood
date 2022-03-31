@@ -39,13 +39,14 @@ public final class Constants {
     public static double autoDrive = .3;
     public static double winchvolt = 5;
 
-    //list of ports for sensors
+    //list of dio ports for sensors
     public static int rightEncoder1 = 0;
     public static int rightEncoder2 = 1;
-    public static int leftEncoder1 = 2;
-    public static int leftEncoder2 = 3;
+    public static int leftEncoder1 = 8;
+    public static int leftEncoder2 = 9;
 
     //setting the voltage for autonomous 
     public static double shooterauto = 3;
-    
+    public static double autodriveleft = .3;
+    public static double autodriveright = .3;
 }

@@ -2,15 +2,20 @@ package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.intakesub;
+import frc.robot.subsystems.shootersub;
 
 public class intakein extends CommandBase {
 
     private final intakesub m_Intake;
+    private final shootersub m_Shooter;
 
-    public intakein(intakesub subsystem) {
-        m_Intake = subsystem;
-        addRequirements(m_Intake);
+    public intakein(intakesub intakesub, shootersub shootersub) {
+        m_Intake = intakesub;
+        m_Shooter = shootersub;
+        addRequirements(m_Intake, m_Shooter);
     }
+
+
 
     // only goes once at beginning when command is called
     @Override
@@ -22,6 +27,7 @@ public class intakein extends CommandBase {
     @Override
     public void execute() {
         m_Intake.intakeIn();
+        m_Shooter.shooterIn();
     }
 
     //only goes once at end when command is finishing

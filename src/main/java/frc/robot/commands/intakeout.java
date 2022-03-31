@@ -15,7 +15,7 @@ public class intakeout extends CommandBase{
     //only goes once at beginning when command is called
     @Override
     public void initialize(){
-        
+       
     }
 
     //keeps repeating until the command ends
@@ -33,7 +33,6 @@ public class intakeout extends CommandBase{
     //condition for the command to end on its own
     @Override
     public boolean isFinished(){
-
         return false;
     }
 }
