@@ -25,6 +25,7 @@ public class autoShooter extends CommandBase{
     @Override
     public void initialize(){
         startTime = System.currentTimeMillis();
+        System.out.println("shooter");
     }
 
     // keeps repeating until the command ends

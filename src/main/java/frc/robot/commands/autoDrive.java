@@ -14,7 +14,7 @@ public class autoDrive extends CommandBase{
     private double startTime;
     private double duration;
     
-    public autoDrive (drivetrainsub subsystem, double distance){
+    public autoDrive (drivetrainsub subsystem, double duration){
         m_Drive = subsystem;
         //this.distance = distance;
         this.duration = duration*1000;
@@ -33,6 +33,8 @@ public class autoDrive extends CommandBase{
     public void execute(){
         //m_Drive.autoDrive(distance);
         m_Drive.tankdrive(Constants.autodriveleft, Constants.autodriveright);
+        addRequirements(m_Drive);
+
     }
 
     //only goes once at end when command is finishing

@@ -15,11 +15,11 @@ public class AutonomousPhase extends SequentialCommandGroup{
     public AutonomousPhase(drivetrainsub drivetrainsub, shootersub shootersub, intakesub intakesub){
         addCommands(
             //number at the end is for how long the command runs (in seconds)
-            new autoShooter(shootersub, intakesub, 5),
+            new autoShooter(shootersub, intakesub, 4),
             new WaitCommand(1),
-            new autoDrive(drivetrainsub, 2),
-            new WaitCommand(1),
-            new autoTurn(drivetrainsub, 1)
+            new autoDrive(drivetrainsub, 4),
+            new WaitCommand(2),
+            new autoTurn(drivetrainsub, 2.5)
         );
     }
 }

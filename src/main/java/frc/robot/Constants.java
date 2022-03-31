@@ -34,7 +34,7 @@ public final class Constants {
     public static double intakevolt = 6;
     public static double liftvoltup = 4;
     public static double liftvoltdown = -2;
-    public static double shootervoltout = 8;
+    public static double shootervoltout = 9;
     public static double shootervoltin = 6;
     public static double autoDrive = .3;
     public static double winchvolt = 5;
@@ -46,7 +46,7 @@ public final class Constants {
     public static int leftEncoder2 = 9;
 
     //setting the voltage for autonomous 
-    public static double shooterauto = 3;
+    public static double shooterauto = 8;
     public static double autodriveleft = .3;
     public static double autodriveright = .3;
 }

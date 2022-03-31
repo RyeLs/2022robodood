@@ -11,10 +11,11 @@ public class autoTurn extends CommandBase {
     private double duration;
 
     
-    public autoTurn (drivetrainsub subsystem, double degrees){
+    public autoTurn (drivetrainsub subsystem, double duration){
         m_Drive = subsystem;
         //this.degrees = degrees;
         this.duration = duration*1000;
+        addRequirements(m_Drive);
 
     }
     
