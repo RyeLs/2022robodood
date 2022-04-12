@@ -30,4 +30,12 @@ public class intakesub  extends SubsystemBase{
         left.setVoltage(0);
         right.setVoltage(0);
     }
+
+    //auto intake
+    public void intakeAuto (){
+        left.setVoltage(Constants.intakeauto);
+        right.setVoltage(Constants.intakeauto);
+    }
+
 }
+

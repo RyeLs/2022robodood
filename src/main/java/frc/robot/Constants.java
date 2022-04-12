@@ -31,7 +31,7 @@ public final class Constants {
 
     //setting the voltage (power) for the motors
     public static double hingevolt = 5; //change this later when figuring out the voltage for the robo
-    public static double intakevolt = 6;
+    public static double intakevolt = 7;
     public static double liftvoltup = 4;
     public static double liftvoltdown = -2;
     public static double shootervoltout = 9;
@@ -47,6 +47,7 @@ public final class Constants {
 
     //setting the voltage for autonomous 
     public static double shooterauto = 8;
+    public static double intakeauto = 7;
     public static double autodriveleft = .3;
     public static double autodriveright = .3;
 }

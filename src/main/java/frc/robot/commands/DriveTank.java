@@ -34,8 +34,8 @@ public class DriveTank extends CommandBase{
         }
         else {
             //Four changes
-            m_Drive.tankdrive(-1.2/(1+Math.pow(2,-2*(-leftSpeed.getAsDouble()-.5)))+(1.2/3), 
-            -1.2/(1+Math.pow(2,-2*(-rightSpeed.getAsDouble()-.5)))+(1.2/3));
+            m_Drive.tankdrive(-1.1/(1+Math.pow(2,-2*(-leftSpeed.getAsDouble()-.5)))+(1.1/3), 
+            -1.1/(1+Math.pow(2,-2*(-rightSpeed.getAsDouble()-.5)))+(1.1/3));
         }
     }
 

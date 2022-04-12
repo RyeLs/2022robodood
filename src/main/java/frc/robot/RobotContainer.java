@@ -63,23 +63,23 @@ public class RobotContainer {
     B.whenPressed(new hingeup(m_Hinge));
     B.whenReleased(new hingestop(m_Hinge));
 
-    X.whenPressed(new winchlower(m_Lift));
-    X.whenReleased(new winchstop(m_Lift));
+    //X.whenPressed(new winchlower(m_Lift));
+    //X.whenReleased(new winchstop(m_Lift));
 
-    Y.whenPressed(new liftraise(m_Lift));
-    Y.whenReleased(new liftstop(m_Lift));
+    //Y.whenPressed(new liftraise(m_Lift));
+    //Y.whenReleased(new liftstop(m_Lift));
     
     LB.whenPressed(new shooterout(m_Shooter));
     LB.whenReleased(new shooterstop(m_Shooter));
 
     //RB.whenPressed(new shooterin(m_Shooter));
-    //RB.whenReleased(new shooterstop(m_Shooter));
+    //RB.whenReleased(new s hooterstop(m_Shooter));
 
-    Back.whenPressed(new liftlower(m_Lift));
-    Back.whenReleased(new liftstop(m_Lift));
+    //Back.whenPressed(new liftlower(m_Lift));
+    //Back.whenReleased(new liftstop(m_Lift));
 
-    Start.whenPressed(new winchraise(m_Lift));
-    Start.whenReleased(new winchstop(m_Lift));
+    //Start.whenPressed(new winchraise(m_Lift));
+    //Start.whenReleased(new winchstop(m_Lift));
 
     Ltrigger.whenPressed(new intakeout(m_Intake));
     Ltrigger.whenReleased(new intakestop(m_Intake, m_Shooter));
@@ -92,8 +92,8 @@ public class RobotContainer {
       left drive: left joystick
       right drive: right joystick
 
-      hinge down: A
-      hinge up: B
+      hinge up: A
+      hinge down: B
       intake out: LT
       intake in: RT
       shooter in: RT
