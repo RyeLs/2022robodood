@@ -14,12 +14,16 @@ public class shootersub extends SubsystemBase {
     }
 
     //ball goes in
+    //for ball to go in, motors need to go in opposite directions
+    //as long as the neg/pos voltages are opposite from the other direction
     public void shooterIn (){
         left.setVoltage(-Constants.shootervoltin);
         right.setVoltage(-Constants.shootervoltin);
     }   
 
     //ball goes out
+    //for ball to go out, motors need to go in opposite directions
+    //as long as the neg/pos voltages are opposite from the other direction
     public void shooterOut (){
         left.setVoltage(Constants.shootervoltout);
         right.setVoltage(Constants.shootervoltout);

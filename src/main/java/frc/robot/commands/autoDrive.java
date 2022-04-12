@@ -7,6 +7,9 @@ import frc.robot.Constants;
 import frc.robot.subsystems.drivetrainsub;
 
 
+//commented out lines are for distance-based autonomous (using encoders)
+//current lines are for time-based autonomous
+
 public class autoDrive extends CommandBase{
 
     private final drivetrainsub m_Drive;

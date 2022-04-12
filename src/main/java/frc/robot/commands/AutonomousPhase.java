@@ -15,6 +15,7 @@ public class AutonomousPhase extends SequentialCommandGroup{
     public AutonomousPhase(drivetrainsub drivetrainsub, shootersub shootersub, intakesub intakesub){
         addCommands(
             //number at the end is for how long the command runs (in seconds)
+            //dont delete for comment out commands, just set the time duration to 0
             new autoDrive(drivetrainsub, 2.6),
             new WaitCommand(1),
             new autoShooter(shootersub, intakesub, 4),

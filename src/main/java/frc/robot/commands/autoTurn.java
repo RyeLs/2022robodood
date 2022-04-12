@@ -4,6 +4,9 @@ import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.Constants;
 import frc.robot.subsystems.drivetrainsub;
 
+//commented out lines are for degrees-based autonomous (using gyro)
+//current lines are for time-based autonomous
+
 public class autoTurn extends CommandBase {
     private final drivetrainsub m_Drive;
     //private final double degrees;

@@ -45,13 +45,15 @@ public class RobotContainer {
    * edu.wpi.first.wpilibj.Joystick} or {@link XboxController}), and then passing it to a {@link
    * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
+
+  //if you want to disable something, comment out the button line and the associating command (whenpressed & when released)
   private void configureButtonBindings() {
     Button A = new JoystickButton(xboxController, 1);
     Button B = new JoystickButton(xboxController, 2);
     Button X = new JoystickButton(xboxController, 3);
     Button Y = new JoystickButton(xboxController, 4);
     Button LB = new JoystickButton(xboxController, 5);
-    //Button RB = new JoystickButton(xboxController, 6);
+    Button RB = new JoystickButton(xboxController, 6);
     Button Back = new JoystickButton(xboxController, 7);
     Button Start = new JoystickButton(xboxController, 8);
     triggersub Ltrigger = new triggersub(xboxController, 2);
@@ -63,23 +65,23 @@ public class RobotContainer {
     B.whenPressed(new hingeup(m_Hinge));
     B.whenReleased(new hingestop(m_Hinge));
 
-    //X.whenPressed(new winchlower(m_Lift));
-    //X.whenReleased(new winchstop(m_Lift));
+    X.whenPressed(new winchlower(m_Lift));
+    X.whenReleased(new winchstop(m_Lift));
 
-    //Y.whenPressed(new liftraise(m_Lift));
-    //Y.whenReleased(new liftstop(m_Lift));
+    Y.whenPressed(new liftraise(m_Lift));
+    Y.whenReleased(new liftstop(m_Lift));
     
     LB.whenPressed(new shooterout(m_Shooter));
     LB.whenReleased(new shooterstop(m_Shooter));
 
-    //RB.whenPressed(new shooterin(m_Shooter));
-    //RB.whenReleased(new s hooterstop(m_Shooter));
+    RB.whenPressed(new shooterin(m_Shooter));
+    RB.whenReleased(new shooterstop(m_Shooter));
 
-    //Back.whenPressed(new liftlower(m_Lift));
-    //Back.whenReleased(new liftstop(m_Lift));
+    Back.whenPressed(new liftlower(m_Lift));
+    Back.whenReleased(new liftstop(m_Lift));
 
-    //Start.whenPressed(new winchraise(m_Lift));
-    //Start.whenReleased(new winchstop(m_Lift));
+    Start.whenPressed(new winchraise(m_Lift));
+    Start.whenReleased(new winchstop(m_Lift));
 
     Ltrigger.whenPressed(new intakeout(m_Intake));
     Ltrigger.whenReleased(new intakestop(m_Intake, m_Shooter));

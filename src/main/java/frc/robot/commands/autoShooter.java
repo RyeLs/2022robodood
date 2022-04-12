@@ -7,6 +7,10 @@ import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.intakesub;
 import frc.robot.subsystems.shootersub;
 
+/*commented out lines are from the previously used shooter-intake autosequence
+  putting intake & shooter in one command for autosequence 
+*/
+//current lines are for time-based autonomous
 
 public class autoShooter extends CommandBase{
 
@@ -26,7 +30,9 @@ public class autoShooter extends CommandBase{
     @Override
     public void initialize(){
         startTime = System.currentTimeMillis();
-        System.out.println("shooter");
+        /*System.out.println("shooter");
+            line to test if code is working more or less
+        */
     }
 
     // keeps repeating until the command ends

@@ -5,6 +5,8 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.intakesub;
 
+//same concept as autodrive (based on time)
+//didnt use because we preloaded the ball (and didnt intake another one after shooting)
 
 public class autoIntake extends CommandBase{
 

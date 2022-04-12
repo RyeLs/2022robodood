@@ -11,6 +11,7 @@ import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 
+//motor groupings for left and right drive
 public class drivetrainsub extends SubsystemBase {
   Spark frontright = new Spark(Constants.frontRightDrive);
   Spark backright = new Spark (Constants.backRightDrive);
@@ -22,6 +23,7 @@ public class drivetrainsub extends SubsystemBase {
   
   DifferentialDrive drive = new DifferentialDrive(m_right,m_left);
 
+  //encoders for drive (which we didnt use)
   private Encoder right =new Encoder (Constants.rightEncoder1, Constants.rightEncoder2);
   private Encoder left =new Encoder (Constants.leftEncoder1, Constants.leftEncoder2);
 
@@ -51,6 +53,8 @@ public double getDistance(){
   return Math.abs((right.getDistance()+left.getDistance())/2);
 }
 
+//command for autodrive
+//also gradually increases break as you get closer to your destination so the robot stops exactly where you need it do
 public void autoDrive(double distance) {
   while (getDistance()<distance){
     double brake = 1-getDistance()/distance;
@@ -62,6 +66,8 @@ public double getRotation(){
   return 1;
 }
 
+//command for autoturn
+//same thing as autodrive but with degrees instead of distance
 public void autoTurn(double degrees){
   while (getRotation()<degrees){
     double brake = 1-getRotation()/degrees;

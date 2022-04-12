@@ -14,12 +14,16 @@ public class intakesub  extends SubsystemBase{
     }
 
     //ball goes in
+    //for ball to go in, motors need to go in opposite directions
+    //as long as the neg/pos voltages are opposite from the other direction
     public void intakeIn (){
         left.setVoltage(Constants.intakevolt);
         right.setVoltage(-Constants.intakevolt);
     }   
 
     //ball goes out
+    //for ball to go out, motors need to go in opposite directions
+    //as long as the neg/pos voltages are opposite from the other direction
     public void intakeOut (){
         left.setVoltage(-Constants.intakevolt);
         right.setVoltage(Constants.intakevolt);
@@ -32,6 +36,7 @@ public class intakesub  extends SubsystemBase{
     }
 
     //auto intake
+    //didnt use because we preloaded the ball for autonomous (and didnt intake another one after shooting)
     public void intakeAuto (){
         left.setVoltage(Constants.intakeauto);
         right.setVoltage(Constants.intakeauto);
